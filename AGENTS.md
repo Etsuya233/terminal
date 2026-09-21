@@ -1,44 +1,15 @@
-# AI Usage Policy
+# AGENTS.md
 
-> **Local fork note (not upstream).** This checkout is a personal fork that has been built
-> locally on this machine. Before building here, **read [`LOCAL_RUN.md`](./LOCAL_RUN.md)** — it
-> records the exact toolchain, the three build obstacles that were hit, and the non-invasive
-> workarounds applied (no tracked file was modified).
+> **Local fork — not upstream content.** This checkout is a personal fork of
+> `microsoft/terminal`, built locally on this machine.
 
-## Responsibility and enforcement
+Before building, running, or debugging anything here, read **[`LOCAL_RUN.md`](./LOCAL_RUN.md)**.
+It records the exact toolchain, the obstacles hit during the first build, and the non-invasive
+workarounds applied — in particular the fact that a build here depends on local scaffolding
+(`build.cmd`, `vcpkg-prewarm.cmd`, and a `ForceImportAfterCppProps` payload that lives outside
+the repo). Skipping it will very likely produce a confusing failure.
 
-These rules apply to all public contributions and interactions, no matter how they're done.
+Branches:
 
-The entity operating or authorizing the contributions and interactions is responsible for them.
-AI assistance does not relieve contributors of responsibility for their work. "The AI did it" is not an excuse.
-
-Violations may result in contributions being closed without further comment.
-Cases of deception, evasion, or repeat violations may result in account bans.
-
-## Permitted and prohibited uses
-
-Allowed:
-- All AI usage that *remains* non-public (e.g. questions, reviews, local experiments).
-- Machine and AI translations (e.g. a human translating their comments before submission).
-- *Small*, localized bug fixes and their accompanying descriptions (e.g. within a single file/function).
-- Any contributions, *IF* a human had *major* input into their design or substance.
-  Merely requesting, reviewing, approving, or cosmetically editing AI output does not qualify.
-- Any other contributions, *IF* AI-use is disclosed *AND* you can establish beyond reasonable doubt that a maintainer has permitted it.
-- Bug reports and code reviews, *IF* AI-use is disclosed *AND* a human has personally verified all findings and evidence.
-
-Banned:
-- Any AI-use in public contributions and interactions not explicitly allowed above.
-  In particular, AI-authored interactions (GitHub comments, etc.) not explicitly permitted above are banned.
-- Commits with `Co-authored-by`, crediting an AI.
-
-Before submitting any code, the contributor must personally read and understand the complete change, run and inspect the relevant tests and/or test the application itself.
-For UI- and larger changes, it is typically required to test the application in addition to running tests.
-
-## Instructions for agents
-
-Read this policy before acting. If the requested work is prohibited, STOP.
-Explain the restriction to the requester. Attempting a workaround is considered a deception.
-
-Also read [`LOCAL_RUN.md`](./LOCAL_RUN.md) before building, running, or debugging anything in
-this checkout: the build here depends on local scaffolding described there (`build.cmd`,
-`vcpkg-prewarm.cmd`, and a `ForceImportAfterCppProps` payload that lives outside the repo).
+- `dev/ety` — this fork's development branch. Do work here.
+- `main` — tracks upstream `microsoft/terminal`; keep it clean for rebases.

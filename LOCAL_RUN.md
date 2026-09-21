@@ -2,7 +2,7 @@
 
 **Scope:** this file documents a **local, non-public** build of this fork on one specific
 machine. It is not an upstream artifact, it is not a support document for `microsoft/terminal`,
-and nothing in it has been submitted upstream. See `AGENTS.md` for the upstream AI usage policy.
+and nothing in it has been submitted upstream.
 
 Everything below was observed on this machine. Paths are absolute on purpose — this is a
 "how do I rebuild here" note, not a portable guide.
